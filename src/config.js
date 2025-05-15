@@ -11,8 +11,9 @@ module.exports = {
     mysql: {
         host: process.env.MYSQL_HOST || "localhost",
         user: process.env.MYSQL_USER || "root",
-        pasword: process.env.MYSQL_PASSWORD ||  "",
-        database: process.env.MYSQL_DB || "API",
-        dialect: process.env.MYSQL_DIALECT || "mysql"
-    }
+        pasword: process.env.MYSQL_PASSWORD || "",
+        database: process.env.MYSQL_DB || "apiAPI",
+        port: process.env.MYSQL_PORT || 3306,
+        dialect: process.env.MYSQL_DIALECT || "mysql",
+    },
 }
