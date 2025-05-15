@@ -1,4 +1,4 @@
-const User = require('../models/user.model');
+const User = require("../models/user.model");
 
 const createUser = async (data) => {
     return await User.create(data);
@@ -14,13 +14,13 @@ const getUserById = async (id) => {
 
 const updateUser = async (id, data) => {
     const user = await User.findByPk(id);
-    if (!user) throw new Error('User not found');
+    if (!user) throw new Error("User not found");
     return await user.update(data);
 };
 
 const deleteUser = async (id) => {
     const user = await User.findByPk(id);
-    if (!user) throw new Error('User not found');
+    if (!user) throw new Error("User not found");
     return await user.destroy();
 };
 

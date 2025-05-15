@@ -1,14 +1,14 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../db/db');
-const User = require('./user.model');
+const { DataTypes } = require("sequelize");
+const sequelize = require("../db/db");
+const User = require("./user.model");
 
-const Auth = sequelize.define('Auth', {
+const Auth = sequelize.define("Auth", {
     id: {
         type: DataTypes.UUID,
         primaryKey: true,
         references: {
             model: User,
-            key: 'id'
+            key: "id"
         }
     },
     email: {
@@ -18,7 +18,7 @@ const Auth = sequelize.define('Auth', {
     password: DataTypes.STRING
 });
 
-User.hasOne(Auth, { foreignKey: 'id' });
-Auth.belongsTo(User, { foreignKey: 'id' });
+User.hasOne(Auth, { foreignKey: "id" });
+Auth.belongsTo(User, { foreignKey: "id" });
 
 module.exports = Auth;

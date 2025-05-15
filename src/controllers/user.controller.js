@@ -1,4 +1,4 @@
-const UserService = require('../services/user.service');
+const UserService = require("../services/user.service");
 
 const createUser = async (req, res, next) => {
     try {
@@ -7,7 +7,7 @@ const createUser = async (req, res, next) => {
     } catch (err) {
         next(err);
     }
-    };
+};
 
 const getUsers = async (req, res, next) => {
     try {
@@ -16,17 +16,16 @@ const getUsers = async (req, res, next) => {
     } catch (err) {
         next(err);
     }
-    };
+};
 
 const getUserById = async (req, res, next) => {
     try {
         const user = await UserService.getUserById(req.params.id);
-        if (!user) return res.status(404).json({ message: 'User not found' });
         res.json(user);
     } catch (err) {
         next(err);
     }
-    };
+};
 
 const updateUser = async (req, res, next) => {
     try {
@@ -35,7 +34,7 @@ const updateUser = async (req, res, next) => {
     } catch (err) {
         next(err);
     }
-    };
+};
 
 const deleteUser = async (req, res, next) => {
     try {
@@ -44,7 +43,7 @@ const deleteUser = async (req, res, next) => {
     } catch (err) {
         next(err);
     }
-    };
+};
 
 module.exports = {
     createUser,

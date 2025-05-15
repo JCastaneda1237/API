@@ -1,4 +1,4 @@
-const UserRoleService = require('../services/userRole.service');
+const UserRoleService = require("../services/userRole.service");
 
 const assignRoleToUser = async (req, res, next) => {
     try {

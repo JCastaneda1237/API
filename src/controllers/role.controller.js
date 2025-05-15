@@ -1,4 +1,4 @@
-const RoleService = require('../services/role.service');
+const RoleService = require("../services/role.service");
 
 const createRole = async (req, res, next) => {
     try {
@@ -22,3 +22,5 @@ module.exports = {
     createRole,
     getRoles
 };
+
+

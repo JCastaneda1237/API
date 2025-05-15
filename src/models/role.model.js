@@ -1,7 +1,7 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../db/db');
+const { DataTypes } = require("sequelize");
+const sequelize = require("../db/db");
 
-const Role = sequelize.define('Role', {
+const Role = sequelize.define("Role", {
     id: {
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
